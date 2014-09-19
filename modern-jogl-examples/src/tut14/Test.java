@@ -5,7 +5,6 @@ package tut14;
  */
 import glsl.GLSLProgramObject;
 import com.jogamp.opengl.util.GLBuffers;
-import com.jogamp.opengl.util.glsl.ShaderUtil;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
 import java.awt.Frame;
@@ -138,7 +137,7 @@ public class Test implements GLEventListener {
                 gl3.glVertexAttribPointer(0, 4, GL3.GL_FLOAT, false, 0, 0);
                 gl3.glVertexAttribPointer(1, 2, GL3.GL_FLOAT, false, 0, 4 * 4 * 4);
 
-                gl3.glDrawArrays(GL3.GL_QUADS, 0, 4);
+                gl3.glDrawArrays(GL3.GL_TRIANGLE_FAN, 0, 4);
                
                 texture.disable(gl3);
             }
